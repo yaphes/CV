@@ -40,3 +40,5 @@ for p = 1:numFrames
     I(:,:,3) = temp;
     imwrite(I,fullfile('Output',FOLDER,fileNames{p}));
 end
+
+%%%%%%%
