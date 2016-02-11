@@ -6,3 +6,5 @@ tempo_filter: Execute temporal derivative filtering
 
 Create folder under the local path named "Output".
 In "Output" folder we need another three folders with the same name as three original image folders.
+
+Check "sample.tiff" for example.
