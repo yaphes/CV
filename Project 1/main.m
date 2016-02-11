@@ -2,16 +2,15 @@ clear all
 
 %%Store image sequence in a 3 dimension array
 %%Also translate rgb into grayscale
-FOLDER = 'EnterExitCrossingPaths2cor';  %original image folder
+FOLDER = 'Office';  %original image folder
 sequence = Read_Sequence(FOLDER);
-
+n = size(filtered,3);
 
 %%Smooth the image
 %smoothed = smooth_filter(sequence,[3 3],'box');
 
 %%Filter the image
 filtered = tempo_filter(sequence,'gaussian');
-n = size(filtered,3);
 
 %%Threshold filtered image
 TH = 10;  %Threshold value
