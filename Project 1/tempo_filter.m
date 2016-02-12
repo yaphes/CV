@@ -23,7 +23,7 @@ switch type
     case 'gaussian'   %1d derivative gaussian filter
         sig = p3;
         n = size(input,3);
-        x = [-round(5*sig):round(5*sig)];
+        x = [-(round(5*sig)-1)/2:(round(5*sig)-1)/2];
         arg = -(x.*x)/(2*sig*sig);
         h = -(x/(sig*sig)).*exp(arg);
         sumh = sum(abs(h(:)));
