@@ -1,4 +1,4 @@
-function [output] = smooth_filter(input,parameter,type)
+function [output] = smooth_filter(input,type,parameter)
 
 
 
@@ -14,13 +14,7 @@ switch type
         end
     
     case 'guassian'
-%         sig2 = 1.4 *1.4 ;
-%         mask = zeros(7,7);
-%         for x = -(round(5*sig2)-1)/2:(round(5*sig2)-1)/2
-%         for y = -(round(5*sig2)-1)/2:(round(5*sig2)-1)/2
-%         mask(x+4,y+4) = exp((-x*x - y*y)/(2 *sig2));
-%         end
-%         end
+
         n = size(input,3);
         sig = parameter;
         for p = 1:n
