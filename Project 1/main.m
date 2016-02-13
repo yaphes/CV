@@ -6,10 +6,10 @@ FOLDER = 'Office';  %original image folder
 sequence = Read_Sequence(FOLDER);
 
 %%Smooth the image
-%smoothed = smooth_filter(sequence,[3 3],'box');
+smoothed = smooth_filter(sequence,1.4,'guassian');
 
 %%Filter the image
-filtered = tempo_filter(sequence,'gaussian');
+filtered = tempo_filter(smoothed,'gaussian');
 n = size(filtered,3);
 
 %%Threshold filtered image
