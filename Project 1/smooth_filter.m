@@ -13,7 +13,7 @@ switch type
            output(:,:,p) = imboxfilt(input(:,:,p),filterSize);
         end
     
-    case 'gaussian'
+    case 'guassian'
 
         n = size(input,3);
         sig = parameter;

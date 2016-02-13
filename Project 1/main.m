@@ -2,11 +2,11 @@ clear all
 
 %%Store image sequence in a 3 dimension array
 %%Also translate rgb into grayscale
-FOLDER = 'RedChair';  %original image folder
+FOLDER = 'Office';  %original image folder
 sequence = Read_Sequence(FOLDER);
 
 %%Smooth the image
-smoothed = smooth_filter(sequence,'gaussian',1.4);
+smoothed = smooth_filter(sequence,1.4,'guassian');
 
 %%Filter the image
 filtered = tempo_filter(smoothed,'gaussian');
