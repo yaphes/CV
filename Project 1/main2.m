@@ -6,11 +6,11 @@ FOLDER = 'EnterExitCrossingPaths2cor';  %original image folder
 sequence = Read_Sequence(FOLDER);
 
 %%Smooth the image
-smoothed = smooth_filter(sequence,'box',3);
+%smoothed = smooth_filter(sequence,'box',3);
 
 %%Filter the image
 frame = 100;
-filtered = tempo_filter(smoothed,'gaussian',2.2,frame);
+filtered = tempo_filter(sequence,'gaussian',2.2,frame);
 
 %%Threshold filtered image
 TH = 15;  %Threshold value
