@@ -9,11 +9,13 @@ sequence = Read_Sequence(FOLDER);
 %smoothed = smooth_filter(sequence,'box',3);
 
 %%Filter the image
-frame = 100;
-filtered = tempo_filter(sequence,'gaussian',2.2,frame);
+frame = 250;
+filtered = tempo_filter(sequence,'gaussian',0.5,frame);
 
 %%Threshold filtered image
-TH = 15;  %Threshold value
+TH = select_threshold(filtered);  %Threshold value
+%TH = 6;
+
 mask = zeros(size(filtered));
 mask(abs(filtered)>=TH) = 1;
 mask(abs(filtered)<TH) = 0;
